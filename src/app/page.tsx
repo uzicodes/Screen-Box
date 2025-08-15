@@ -5,7 +5,6 @@ export default function Home() {
         <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
         <h1 className="text-7xl font-bold">SCREEN  BOX</h1>
       </div>
-      <p className="mt-4">Your movie/webseries streaming web app is ready!</p>
     </main>
   );
 }
