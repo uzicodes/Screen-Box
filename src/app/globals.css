@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Maragsa Display';
+	src: url('/fonts/Maragsa Display 400.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Maragsa Display', sans-serif;
+}
+
