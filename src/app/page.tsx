@@ -1,10 +1,13 @@
+import { IoMdHome } from "react-icons/io";
+import { TfiVideoClapper } from "react-icons/tfi";
+
 export default function Home() {
   return (
     <>
       <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-full px-8 py-3 shadow-lg border border-white/20">
         <ul className="flex gap-6">
-          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">HOME</button></li>
-          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">MOVIES</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><IoMdHome size={22} /> HOME</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><TfiVideoClapper size={22} /> MOVIES</button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">WEB-SERIES</button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">NEW & POPULAR</button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">MY LIST</button></li>
