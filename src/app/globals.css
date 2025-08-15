@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@200;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,3 +14,6 @@ body {
 	font-family: 'Maragsa Display', sans-serif;
 }
 
+.font-cinzel {
+  font-family: 'Lora', serif;
+}

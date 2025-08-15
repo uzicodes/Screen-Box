@@ -1,10 +1,21 @@
-  export default function Home() {
-    return (
+export default function Home() {
+  return (
+    <>
+      <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-full px-8 py-3 shadow-lg border border-white/20">
+        <ul className="flex gap-6">
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">HOME</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">MOVIES</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">WEB-SERIES</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">NEW & POPULAR</button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition">MY LIST</button></li>
+        </ul>
+      </nav>
       <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#2dd4bf] to-[#1f2937]">
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full mt-20">
           <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
           <h1 className="text-7xl font-bold">SCREEN  BOX</h1>
         </div>
       </main>
-    );
-  }
+    </>
+  );
+}
