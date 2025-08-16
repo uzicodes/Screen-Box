@@ -23,19 +23,6 @@ export default function Home() {
           <br></br>
           <h2 className="text-2xl">nothing to pay, Enjoy !</h2>
         </div>
-        {/* Movie block demo - horizontal scroll */}
-        <section className="w-full mt-12">
-          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Demo Movies</h3>
-          <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
-            {[1,2,3,4,5,6,7,8].map((num) => (
-              <div key={num} className="min-w-[200px] h-[300px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20">
-                <img src={`/android-icon-144x144.png`} alt={`Movie ${num}`} className="w-32 h-32 object-cover rounded-lg mb-4" />
-                <span className="text-lg font-semibold text-white">Movie Title {num}</span>
-                <span className="text-sm text-gray-300">Genre</span>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
     </>
   );
