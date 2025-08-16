@@ -9,11 +9,11 @@ export default function Home() {
     <>
   <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-full px-8.5 py-1 shadow-lg border border-white/20 w-[650px] h-14">
         <ul className="flex gap-3 flex-nowrap">
-          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><IoMdHome size={22} /></button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><IoMdHome size={24} color="#cf6a17" /></button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><TfiVideoClapper size={20} color="#000" /> MOVIES</button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><IoVideocam size={22} color="#FF00FF" /> WEB-SERIES</button></li>
           <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><GoStarFill size={22} color="#FFD700" /> NEW & POPULAR</button></li>
-          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><RiAccountCircleFill size={22} color="#FF0000" /></button></li>
+          <li><button className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2"><RiAccountCircleFill size={26} color="#3b17cf" /></button></li>
         </ul>
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#2dd4bf] to-[#1f2937]">
@@ -23,6 +23,19 @@ export default function Home() {
           <br></br>
           <h2 className="text-2xl">nothing to pay, Enjoy !</h2>
         </div>
+        {/* Movie block demo - horizontal scroll */}
+        <section className="w-full mt-12">
+          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Demo Movies</h3>
+          <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
+            {[1,2,3,4,5,6,7,8].map((num) => (
+              <div key={num} className="min-w-[200px] h-[300px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20">
+                <img src={`/android-icon-144x144.png`} alt={`Movie ${num}`} className="w-32 h-32 object-cover rounded-lg mb-4" />
+                <span className="text-lg font-semibold text-white">Movie Title {num}</span>
+                <span className="text-sm text-gray-300">Genre</span>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );
