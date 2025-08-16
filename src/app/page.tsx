@@ -23,6 +23,55 @@ export default function Home() {
           <br></br>
           <h2 className="text-2xl">nothing to pay, Enjoy !</h2>
         </div>
+        {/* Filmstrip/Carousel for movies */}
+        <section className="w-full mt-12">
+          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Movies</h3>
+          <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
+            {[{
+              title: "Inception",
+              genre: "Sci-Fi",
+              year: 2010,
+              img: "/android-icon-144x144.png",
+              desc: "A thief who steals corporate secrets through dream-sharing technology."
+            },{
+              title: "Interstellar",
+              genre: "Adventure",
+              year: 2014,
+              img: "/android-icon-192x192.png",
+              desc: "A team travels through a wormhole in space in an attempt to ensure humanity's survival."
+            },{
+              title: "The Dark Knight",
+              genre: "Action",
+              year: 2008,
+              img: "/android-icon-72x72.png",
+              desc: "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
+            },{
+              title: "Avatar",
+              genre: "Fantasy",
+              year: 2009,
+              img: "/android-icon-96x96.png",
+              desc: "A paraplegic Marine dispatched to Pandora becomes torn between following orders and protecting the world."
+            },{
+              title: "Titanic",
+              genre: "Romance",
+              year: 1997,
+              img: "/android-icon-48x48.png",
+              desc: "A love story unfolds on the ill-fated RMS Titanic."
+            }].map((movie, idx) => (
+              <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
+                <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
+                <span className="text-lg font-semibold text-white">{movie.title}</span>
+                <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
+                {/* Details on hover */}
+                <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
+                  <span className="text-lg font-bold mb-2">{movie.title}</span>
+                  <span className="text-sm mb-2">{movie.genre} • {movie.year}</span>
+                  <span className="text-xs text-center">{movie.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );
