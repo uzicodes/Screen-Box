@@ -23,12 +23,12 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/webseries" className={`font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2 ${pathname === "/webseries" ? "border-b-2 border-[#cf6a17]" : ""}`}>
+          <Link href="/web_series" className={`font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2 ${pathname === "/web_series" ? "border-b-2 border-[#cf6a17]" : ""}`}>
             <IoVideocam size={22} color="#FF00FF" /> WEB-SERIES
           </Link>
         </li>
         <li>
-          <Link href="/new-popular" className={`font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2 ${pathname === "/new-popular" ? "border-b-2 border-[#cf6a17]" : ""}`}>
+          <Link href="/new_popular" className={`font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2 ${pathname === "/new_popular" ? "border-b-2 border-[#cf6a17]" : ""}`}>
             <GoStarFill size={22} color="#FFD700" /> NEW & POPULAR
           </Link>
         </li>
