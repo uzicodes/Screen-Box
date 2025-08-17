@@ -5,11 +5,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black">
+  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black">
         {/* Blurred background image from top to bottom before featured movies */}
         <div className="absolute top-0 left-0 w-full h-[700px] z-0">
           <img src="/c1.jpg" alt="Background" className="w-full h-full object-cover blur-[4px] brightness-75" />
         </div>
+
+        {/* Conic gradient section directly below blurred image */}
+        <div className="w-full h-32 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827]" />
         <div className="relative flex flex-col items-center w-full mt-20 z-10">
           <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
           <h1 className="text-8xl font-bold text-white">SCREEN  BOX</h1>
@@ -17,7 +20,7 @@ export default function Home() {
           <h2 className="text-2xl text-white">nothing to pay, Enjoy !</h2>
         </div>
         {/* Filmstrip/Carousel for movies */}
-        <section className="relative w-full mt-12 z-10">
+  <section className="relative w-full mt-48 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Movies</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
