@@ -1,41 +1,10 @@
-import { IoMdHome } from "react-icons/io";
-import { TfiVideoClapper } from "react-icons/tfi";
-import { GoStarFill } from "react-icons/go";
-import { IoVideocam } from "react-icons/io5";
-import { RiAccountCircleFill } from "react-icons/ri";
+
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <>
-  <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-full px-8.5 py-1 shadow-lg border border-white/20 w-[650px] h-14">
-        <ul className="flex gap-3 flex-nowrap">
-          <li>
-            <a href="/" className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2">
-              <IoMdHome size={24} color="#cf6a17" />
-            </a>
-          </li>
-          <li>
-            <a href="/movies" className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2">
-              <TfiVideoClapper size={20} color="#000" /> MOVIES
-            </a>
-          </li>
-          <li>
-            <a href="/webseries" className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2">
-              <IoVideocam size={22} color="#FF00FF" /> WEB-SERIES
-            </a>
-          </li>
-          <li>
-            <a href="/new-popular" className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2">
-              <GoStarFill size={22} color="#FFD700" /> NEW & POPULAR
-            </a>
-          </li>
-          <li>
-            <a href="/profile" className="font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2">
-              <RiAccountCircleFill size={26} color="#3b17cf" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
       <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black">
         {/* Blurred background image from top to bottom before featured movies */}
         <div className="absolute top-0 left-0 w-full h-[700px] z-0">
