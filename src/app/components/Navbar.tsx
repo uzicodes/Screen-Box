@@ -34,7 +34,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/profile" className={`font-lora text-white font-normal px-4 py-2 rounded-full hover:bg-white/20 transition flex items-center gap-2 ${pathname === "/profile" ? "border-b-2 border-[#cf6a17]" : ""}`}>
-            <RiAccountCircleFill size={26} color="#3b17cf" />
+            <RiAccountCircleFill size={26} color="#27B7F5" />
           </Link>
         </li>
       </ul>
