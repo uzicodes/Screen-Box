@@ -13,7 +13,7 @@ export default function Home() {
 
         {/* Conic gradient section directly below blurred image */}
         <div className="w-full h-32 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827]" />
-        <div className="relative flex flex-col items-center w-full mt-20 z-10">
+  <div className="relative flex flex-col items-center w-full mt-0 z-10">
           <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
           <h1 className="text-8xl font-bold text-white">SCREEN  BOX</h1>
           <br></br>
@@ -64,6 +64,45 @@ export default function Home() {
                   <span className="text-sm mb-2">{movie.genre} • {movie.year}</span>
                   <span className="text-xs text-center">{movie.desc}</span>
                 </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Dummy Section 1 */}
+        <section className="relative w-full py-16 bg-white/5 z-10 border-t border-white/10">
+          <h3 className="text-2xl font-bold text-white mb-4 ml-4">Trending Now</h3>
+          <div className="flex gap-6 px-4 overflow-x-auto hide-scrollbar">
+            {[1,2,3,4,5].map((item) => (
+              <div key={item} className="min-w-[180px] h-[220px] bg-white/10 rounded-xl shadow flex flex-col items-center justify-center border border-white/20">
+                <span className="text-lg font-semibold text-white">Trending {item}</span>
+                <span className="text-sm text-gray-300">Category</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Dummy Section 2 */}
+        <section className="relative w-full py-16 bg-white/10 z-10 border-t border-white/10">
+          <h3 className="text-2xl font-bold text-white mb-4 ml-4">Recommended For You</h3>
+          <div className="flex gap-6 px-4 overflow-x-auto hide-scrollbar">
+            {[1,2,3,4,5].map((item) => (
+              <div key={item} className="min-w-[180px] h-[220px] bg-white/10 rounded-xl shadow flex flex-col items-center justify-center border border-white/20">
+                <span className="text-lg font-semibold text-white">Recommended {item}</span>
+                <span className="text-sm text-gray-300">Genre</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Dummy Section 3 */}
+        <section className="relative w-full py-16 bg-white/5 z-10 border-t border-white/10">
+          <h3 className="text-2xl font-bold text-white mb-4 ml-4">Recently Added</h3>
+          <div className="flex gap-6 px-4 overflow-x-auto hide-scrollbar">
+            {[1,2,3,4,5].map((item) => (
+              <div key={item} className="min-w-[180px] h-[220px] bg-white/10 rounded-xl shadow flex flex-col items-center justify-center border border-white/20">
+                <span className="text-lg font-semibold text-white">New {item}</span>
+                <span className="text-sm text-gray-300">Year</span>
               </div>
             ))}
           </div>
