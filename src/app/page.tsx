@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <>
-      <Navbar />
-  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black">
+    <Navbar />
+  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black font-cinzel">
         {/* Blurred background image from top to bottom before featured movies */}
         <div className="absolute top-0 left-0 w-full h-[700px] z-0">
           <img src="/c1.jpg" alt="Background" className="w-full h-full object-cover blur-[4px] brightness-75" />
@@ -15,9 +15,9 @@ export default function Home() {
         <div className="w-full h-32 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827]" />
   <div className="relative flex flex-col items-center w-full mt-0 z-10">
           <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
-          <h1 className="text-8xl font-bold text-white">SCREEN  BOX</h1>
+          <h1 className="text-8xl font-bold text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>SCREEN  BOX</h1>
           <br></br>
-          <h2 className="text-2xl text-white">nothing to pay, Enjoy !</h2>
+          <h2 className="text-2xl text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>nothing to pay, Enjoy !</h2>
           {/* Login Button */}
           <button
             style={{
