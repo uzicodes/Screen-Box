@@ -1,4 +1,4 @@
-
+"use client";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
@@ -18,6 +18,38 @@ export default function Home() {
           <h1 className="text-8xl font-bold text-white">SCREEN  BOX</h1>
           <br></br>
           <h2 className="text-2xl text-white">nothing to pay, Enjoy !</h2>
+          {/* Login Button */}
+          <button
+            style={{
+              cursor: 'pointer',
+              fontWeight: 700,
+              transition: 'all 0.2s',
+              padding: '10px 20px',
+              borderRadius: '100px',
+              background: '#cfef00',
+              border: '1px solid transparent',
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: '15px',
+              marginTop: '24px',
+            }}
+            onMouseOver={e => (e.currentTarget.style.background = '#c4e201')}
+            onMouseOut={e => (e.currentTarget.style.background = '#cfef00')}
+            onMouseDown={e => (e.currentTarget.style.transform = 'scale(0.95)')}
+            onMouseUp={e => (e.currentTarget.style.transform = 'scale(1)')}
+          >
+            Login
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              style={{ width: '34px', marginLeft: '10px', transition: 'transform 0.3s ease-in-out' }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+          </button>
         </div>
         {/* Filmstrip/Carousel for movies */}
   <section className="relative w-full mt-48 z-10">
