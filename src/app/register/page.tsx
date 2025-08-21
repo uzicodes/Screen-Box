@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import { GoHome } from "react-icons/go";
+import { IoHome } from "react-icons/io5";
 import styles from "../login/login.module.css";
 
 export default function RegisterPage() {
@@ -24,6 +26,11 @@ export default function RegisterPage() {
         alt="Background Gradient"
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 }}
       />
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: '14%', left: 0, zIndex: 2 }}>
+        <a href="/" style={{ color: '#F5B727', background: 'none', borderRadius: '50%', padding: '2px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.2s' }} title="Home">
+          <GoHome size={30} />
+        </a>
+      </div>
   <form className={styles.form} onSubmit={handleSubmit} style={{ position: "relative", zIndex: 1 }}>
         <div className={styles.title}>
           <span style={{ display: "block", fontSize: "2rem", fontWeight: 700 }}>REGISTER</span>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import { GoHome } from "react-icons/go";
 import styles from "./login.module.css";
 
 export default function LoginPage() {
@@ -18,6 +19,11 @@ export default function LoginPage() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#18181b", position: "relative" }}>
+  <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: '14%', left: 0, zIndex: 2 }}>
+        <a href="/" style={{ color: '#F5B727', background: 'none', borderRadius: '50%', padding: '2px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.2s' }} title="Home">
+          <GoHome size={30} />
+        </a>
+      </div>
       <img
         src="/gradient_login.png"
         alt="Background Gradient"
