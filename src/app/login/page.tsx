@@ -19,7 +19,7 @@ export default function LoginPage() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#18181b", position: "relative" }}>
       <img
-        src="/gradient.png"
+        src="/gradient_login.png"
         alt="Background Gradient"
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 }}
       />

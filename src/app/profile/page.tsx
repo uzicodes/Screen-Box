@@ -4,7 +4,7 @@ export default function Profile() {
   return (
     <>
       <Navbar />
-  <div className="flex flex-col md:flex-row items-start justify-center min-h-screen p-8 pt-36 bg-[#18181b] gap-8 font-cinzel">
+  <div className="flex flex-col md:flex-row items-start justify-center min-h-screen p-8 pt-36 gap-8 font-cinzel" style={{ background: 'linear-gradient(to bottom, #18181b 0%, #9e0059 100%)' }}>
         <div className="w-full md:w-1/3 flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-8">
           <img src="/android-icon-144x144.png" alt="Avatar" className="w-24 h-24 rounded-full mb-4 border-4 border-white/20 object-cover" />
           <span className="text-2xl font-semibold text-white mb-2">John Doe</span>
