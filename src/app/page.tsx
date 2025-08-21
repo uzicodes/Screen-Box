@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 bg-black font-cinzel">
+  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 font-cinzel" style={{ background: 'linear-gradient(to bottom, transparent 700px, #001220 700px, #001220 100%)' }}>
         {/* Blurred background image from top to bottom before featured movies */}
         <div className="absolute top-0 left-0 w-full h-[700px] z-0">
           <img src="/c1.jpg" alt="Background" className="w-full h-full object-cover blur-[4px] brightness-75" />
