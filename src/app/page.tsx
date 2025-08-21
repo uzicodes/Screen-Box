@@ -22,36 +22,35 @@ export default function Home() {
           {/* Login Button */}
           {/* Login Button with redirect */}
           {/* Add useRouter for navigation */}
-          <Link href="/login" legacyBehavior>
-            <a
-              style={{
-                cursor: 'pointer',
-                fontWeight: 700,
-                transition: 'all 0.2s',
-                padding: '10px 20px',
-                borderRadius: '100px',
-                background: '#cfef00',
-                border: '1px solid transparent',
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: '15px',
-                marginTop: '24px',
-                textDecoration: 'none',
-                color: 'black',
-              }}
+          <Link
+            href="/login"
+            style={{
+              cursor: 'pointer',
+              fontWeight: 700,
+              transition: 'all 0.2s',
+              padding: '10px 20px',
+              borderRadius: '100px',
+              background: '#cfef00',
+              border: '1px solid transparent',
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: '15px',
+              marginTop: '24px',
+              textDecoration: 'none',
+              color: 'black',
+            }}
+          >
+            Login
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              style={{ width: '34px', marginLeft: '10px', transition: 'transform 0.3s ease-in-out' }}
             >
-              Login
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                style={{ width: '34px', marginLeft: '10px', transition: 'transform 0.3s ease-in-out' }}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-              </svg>
-            </a>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
           </Link>
         </div>
         {/* Filmstrip/Carousel for movies */}
