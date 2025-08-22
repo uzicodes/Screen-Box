@@ -18,6 +18,10 @@ export default function RegisterPage() {
     e.preventDefault();
     setError("");
     setSuccess("");
+    if (!email.includes("@")) {
+      setError("Please enter a valid email address containing '@'.");
+      return;
+    }
     const { data, error } = await supabase.auth.signUp({
       email,
       password,

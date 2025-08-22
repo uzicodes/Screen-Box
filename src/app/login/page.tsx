@@ -14,6 +14,10 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    if (!email.includes("@")) {
+      setError("Please enter a valid email address containing '@'.");
+      return;
+    }
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
