@@ -79,7 +79,7 @@ export default function LoginPage() {
             Don't have an account? <a href="/register" style={{ color: "#F5B727", textDecoration: "underline", fontWeight: 600 }}>REGISTER !</a>
         </div>
         <div style={{ width: "100%", textAlign: "center", marginTop: "6px" }}>
-          <a href="/forgotpassword" style={{ color: "#F5B727", textDecoration: "underline", fontWeight: 600, fontFamily: "Lora, serif", fontSize: "0.92rem" }}>Forgot your password?</a>
+          <a href="/forgotpassword" style={{ color: "#F5B727", textDecoration: "underline", fontWeight: 600, fontFamily: "Lora, serif", fontSize: "0.92rem" }}>Forgot password?</a>
         </div>
         {/* ...logos removed... */}
         {error && <p style={{ color: "#e74c3c", textAlign: "center" }}>{error}</p>}

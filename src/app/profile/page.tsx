@@ -8,15 +8,24 @@ import { useCallback, useEffect, useState } from "react";
 export default function Profile() {
   const router = useRouter();
   const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getUser = async () => {
+    const getUserAndProfile = async () => {
       const { data } = await supabase.auth.getUser();
       setUser(data?.user ?? null);
+      if (data?.user) {
+        const { data: profileData } = await supabase
+          .from('profiles')
+          .select('name, email')
+          .eq('id', data.user.id)
+          .single();
+        setProfile(profileData);
+      }
       setLoading(false);
     };
-    getUser();
+    getUserAndProfile();
   }, []);
 
   const handleLogout = useCallback(async () => {
@@ -61,7 +70,12 @@ export default function Profile() {
       <div className="flex flex-col md:flex-row items-start justify-center min-h-screen p-8 pt-36 gap-8 font-cinzel" style={{ background: 'linear-gradient(to bottom, #18181b 0%, #9e0059 100%)' }}>
         <div className="w-full md:w-1/3 flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-8">
           <img src="/android-icon-144x144.png" alt="Avatar" className="w-24 h-24 rounded-full mb-4 border-4 border-white/20 object-cover" />
-          {/* User info removed. Add dynamic user info here if needed. */}
+          {profile && (
+            <>
+              <span className="text-2xl font-semibold text-white mb-2">{profile.name}</span>
+              <span className="text-md text-gray-300 mb-4">{profile.email}</span>
+            </>
+          )}
           <div className="flex gap-4 mb-6">
             <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Edit Profile</button>
             <button className="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 transition" onClick={handleLogout}>Logout</button>
