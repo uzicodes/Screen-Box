@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import { supabase } from "../../utils/supabaseClient";
 import { GoHome } from "react-icons/go";
 import { IoHome } from "react-icons/io5";
 import styles from "../login/login.module.css";
@@ -14,9 +15,19 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add Supabase register logic here
-    // If successful: redirect to /profile
-    // If error: setError("Registration failed. Please check your details.");
+    setError("");
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { name },
+      },
+    });
+    if (error) {
+      setError(error.message || "Registration failed. Please check your details.");
+    } else {
+      window.location.href = "/profile";
+    }
   };
 
   return (
