@@ -18,6 +18,10 @@ export default function LoginPage() {
       setError("Please enter a valid email address containing '@'.");
       return;
     }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long.");
+      return;
+    }
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
