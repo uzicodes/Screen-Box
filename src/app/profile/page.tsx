@@ -1,16 +1,59 @@
 
+"use client";
 import Navbar from "../components/Navbar";
 import { supabase } from "../../utils/supabaseClient";
 import { useRouter } from "next/navigation";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Profile() {
   const router = useRouter();
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      setUser(data?.user ?? null);
+      setLoading(false);
+    };
+    getUser();
+  }, []);
 
   const handleLogout = useCallback(async () => {
-  await supabase.auth.signOut();
-  router.push("/");
+    await supabase.auth.signOut();
+    router.push("/");
   }, [router]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-black text-white text-xl">Loading...</div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <>
+        <Navbar />
+        {/* Lora Google Font import for client-side rendering */}
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white" style={{ fontFamily: 'Lora, serif' }}>
+          <div className="text-3xl mb-4 font-bold" style={{ fontFamily: 'Lora, serif' }}>
+            You must be logged in to view your profile.
+          </div>
+          <div className="text-lg mb-8 text-gray-300" style={{ fontFamily: 'Lora, serif' }}>
+            Please log in to access your account details, watch history, and more.
+          </div>
+          <button
+            className="px-6 py-3 rounded bg-blue-600 text-white text-xl hover:bg-blue-700 transition font-bold"
+            style={{ fontFamily: 'Lora, serif' }}
+            onClick={() => router.push('/login')}
+          >
+            Go to Login
+          </button>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
