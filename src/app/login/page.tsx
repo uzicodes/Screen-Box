@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { supabase } from "../../utils/supabaseClient";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import { GoHome } from "react-icons/go";
 import styles from "./login.module.css";
@@ -12,9 +13,16 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add Supabase login logic here
-    // If successful: redirect to /profile
-    // If error: setError("Login failed. Please check your credentials.");
+    setError("");
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) {
+      setError(error.message || "Login failed. Please check your credentials.");
+    } else {
+      window.location.href = "/profile";
+    }
   };
 
   return (
