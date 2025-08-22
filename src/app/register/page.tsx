@@ -13,20 +13,23 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const [success, setSuccess] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setSuccess("");
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         data: { name },
+        emailRedirectTo: `${window.location.origin}/profile`,
       },
     });
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
-      window.location.href = "/profile";
+      setSuccess("Registration successful! Please check your email to verify your account before logging in.");
     }
   };
 
@@ -83,7 +86,8 @@ export default function RegisterPage() {
             {showPassword ? <IoEyeOff size={22} /> : <IoEye size={22} />}
           </button>
         </div>
-        {error && <p style={{ color: "#e74c3c", textAlign: "center" }}>{error}</p>}
+  {error && <p style={{ color: "#e74c3c", textAlign: "center" }}>{error}</p>}
+  {success && <p style={{ color: "#27ae60", textAlign: "center" }}>{success}</p>}
   <button type="submit" className={styles["button-confirm"]} style={{ marginTop: "20px" }}>Register</button>
       </form>
     </div>
