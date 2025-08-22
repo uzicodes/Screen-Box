@@ -22,22 +22,24 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#18181b" }}>
-      <form onSubmit={handleSubmit} style={{ background: "#fff", padding: "2rem", borderRadius: "1rem", boxShadow: "0 2px 16px #0002", minWidth: 320 }}>
-        <h2 style={{ textAlign: "center", marginBottom: "1rem", color: "#18181b" }}>Forgot Password</h2>
+    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#18181b", fontFamily: 'Lora, serif' }}>
+      {/* Google Fonts Lora import */}
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+      <form onSubmit={handleSubmit} style={{ background: "#fff", padding: "2rem", borderRadius: "1rem", boxShadow: "0 2px 16px #0002", minWidth: 320, fontFamily: 'Lora, serif' }}>
+        <h2 style={{ textAlign: "center", marginBottom: "1rem", color: "#18181b", fontFamily: 'Lora, serif' }}>Forgot Password</h2>
         <input
           type="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
           placeholder="Enter your email"
-          style={{ width: "100%", padding: "0.75rem", marginBottom: "1rem", borderRadius: "0.5rem", border: "1px solid #ccc" }}
+          style={{ width: "100%", padding: "0.75rem", marginBottom: "1rem", borderRadius: "0.5rem", border: "1px solid #ccc", fontFamily: 'Lora, serif' }}
         />
-        <button type="submit" style={{ width: "100%", padding: "0.75rem", background: "#F5B727", color: "#18181b", border: "none", borderRadius: "0.5rem", fontWeight: 600, cursor: "pointer" }}>
+        <button type="submit" style={{ width: "100%", padding: "0.75rem", background: "#F5B727", color: "#18181b", border: "none", borderRadius: "0.5rem", fontWeight: 600, cursor: "pointer", fontFamily: 'Lora, serif' }}>
           Send Reset Link
         </button>
-        {message && <p style={{ color: "green", textAlign: "center", marginTop: "1rem" }}>{message}</p>}
-        {error && <p style={{ color: "red", textAlign: "center", marginTop: "1rem" }}>{error}</p>}
+        {message && <p style={{ color: "green", textAlign: "center", marginTop: "1rem", fontFamily: 'Lora, serif' }}>{message}</p>}
+        {error && <p style={{ color: "red", textAlign: "center", marginTop: "1rem", fontFamily: 'Lora, serif' }}>{error}</p>}
       </form>
     </div>
   );
