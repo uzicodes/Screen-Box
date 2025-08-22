@@ -27,7 +27,7 @@ export default function LoginPage() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#18181b", position: "relative" }}>
-  <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: '14%', left: 0, zIndex: 2 }}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: '14%', left: 0, zIndex: 2 }}>
         <a href="/" style={{ color: '#F5B727', background: 'none', borderRadius: '50%', padding: '2px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.2s' }} title="Home">
           <GoHome size={30} />
         </a>
@@ -37,7 +37,7 @@ export default function LoginPage() {
         alt="Background Gradient"
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 }}
       />
-  <form className={styles.form} onSubmit={handleSubmit} style={{ position: "relative", zIndex: 1 }}>
+      <form className={styles.form} onSubmit={handleSubmit} style={{ position: "relative", zIndex: 1 }}>
         <div className={styles.title}>
           LOGIN<br />
           <span>Welcome back!</span>
@@ -49,6 +49,7 @@ export default function LoginPage() {
           required
           className={styles.input}
           placeholder="Email"
+          style={{ paddingRight: "2.5rem" }}
         />
         <div style={{ position: "relative", width: "100%" }}>
           <input
@@ -73,9 +74,12 @@ export default function LoginPage() {
         <div style={{ width: "100%", textAlign: "center", marginTop: "10px", color: "#ccc", fontFamily: "Lora, serif" }}>
             Don't have an account? <a href="/register" style={{ color: "#F5B727", textDecoration: "underline", fontWeight: 600 }}>REGISTER !</a>
         </div>
-  {/* ...logos removed... */}
+        <div style={{ width: "100%", textAlign: "center", marginTop: "6px" }}>
+          <a href="/forgotpassword" style={{ color: "#F5B727", textDecoration: "underline", fontWeight: 600, fontFamily: "Lora, serif", fontSize: "0.92rem" }}>Forgot your password?</a>
+        </div>
+        {/* ...logos removed... */}
         {error && <p style={{ color: "#e74c3c", textAlign: "center" }}>{error}</p>}
-        <button type="submit" className={styles["button-confirm"]}>Login</button>
+  <button type="submit" className={styles["button-confirm"]} style={{ marginTop: "1px" }}>Login</button>
       </form>
     </div>
   );

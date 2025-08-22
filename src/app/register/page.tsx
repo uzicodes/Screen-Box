@@ -29,7 +29,10 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
-      setSuccess("Registration successful! Please check your email to verify your account before logging in.");
+      setSuccess("Registration successful! Please check your email to verify your account. Redirecting to login...");
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 2000);
     }
   };
 
