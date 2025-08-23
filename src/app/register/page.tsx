@@ -7,6 +7,12 @@ import { IoHome } from "react-icons/io5";
 import styles from "../login/login.module.css";
 
 export default function RegisterPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
   useEffect(() => {
   const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === "SIGNED_IN" && session?.user) {
@@ -36,11 +42,6 @@ export default function RegisterPage() {
       subscription?.unsubscribe();
     };
   }, [name]);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
 
   const [success, setSuccess] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {
