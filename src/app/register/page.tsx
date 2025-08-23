@@ -67,6 +67,24 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
+      // Insert user profile row if user object is available
+      if (data?.user) {
+        try {
+          await supabase
+            .from('profiles')
+            .insert([
+              {
+                id: data.user.id,
+                name,
+                email,
+                created_at: new Date().toISOString(),
+                avatar: "avatar5.svg"
+              }
+            ]);
+        } catch (profileError) {
+          // Optionally log or handle profile insert error
+        }
+      }
       setSuccess("Registration successful! Please check your email to verify your account. Redirecting to login...");
       setTimeout(() => {
         window.location.href = "/login";
