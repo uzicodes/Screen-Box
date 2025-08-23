@@ -5,10 +5,32 @@ import { GoStarFill } from "react-icons/go";
 import { IoVideocam } from "react-icons/io5";
 import { RiAccountCircleFill } from "react-icons/ri";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { supabase } from "../../utils/supabaseClient";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    const resetTimer = () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(async () => {
+        await supabase.auth.signOut();
+        router.push("/login");
+      }, 30 * 60 * 1000); // 30 minutes
+    };
+    const events = ["mousemove", "keydown", "mousedown", "touchstart", "scroll"];
+    events.forEach(event => window.addEventListener(event, resetTimer));
+    resetTimer();
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      events.forEach(event => window.removeEventListener(event, resetTimer));
+    };
+  }, [router]);
+
   return (
     <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-full px-8.5 py-1 shadow-lg border border-white/20 w-[650px] h-14">
       <ul className="flex gap-3 flex-nowrap">
