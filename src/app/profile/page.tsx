@@ -85,7 +85,13 @@ export default function Profile() {
               <span style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>Joined: {profile.created_at ? new Date(profile.created_at).toLocaleDateString() : ''}</span>
             </div>
           )}
-          // ...existing code...
+          {profile && (
+            <div className="flex flex-col items-center mb-4">
+              <span style={{ fontWeight: 600, fontSize: '1.1rem', color: '#fff', marginBottom: '0.2rem' }}>{profile.name}</span>
+              <span style={{ fontSize: '0.95rem', color: '#e5e7eb', marginBottom: '0.2rem' }}>{profile.email}</span>
+              <span style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>Joined: {profile.created_at ? new Date(profile.created_at).toLocaleDateString() : ''}</span>
+            </div>
+          )}
           <div className="flex gap-4 mb-6">
             <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition" onClick={() => setShowAvatarPopup(true)}>Edit Avatar</button>
             <button className="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700 transition" onClick={handleLogout}>Logout</button>
