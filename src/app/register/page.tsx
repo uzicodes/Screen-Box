@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import { supabase } from "../../utils/supabaseClient";
 import { GoHome } from "react-icons/go";
@@ -7,6 +7,35 @@ import { IoHome } from "react-icons/io5";
 import styles from "../login/login.module.css";
 
 export default function RegisterPage() {
+  useEffect(() => {
+  const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === "SIGNED_IN" && session?.user) {
+        // Check if profile already exists
+        const { data: existing } = await supabase
+          .from('profiles')
+          .select('id')
+          .eq('id', session.user.id)
+          .single();
+        if (!existing) {
+          // Insert profile row
+          await supabase
+            .from('profiles')
+            .insert([
+              {
+                id: session.user.id,
+                name,
+                email: session.user.email,
+                created_at: new Date().toISOString(),
+                avatar: "avatar5.svg"
+              }
+            ]);
+        }
+      }
+    });
+    return () => {
+      subscription?.unsubscribe();
+    };
+  }, [name]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,20 +66,7 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
-      // Insert user profile row with all fields
-      if (data?.user) {
-        await supabase
-          .from('profiles')
-          .insert([
-            {
-              id: data.user.id,
-              name,
-              email,
-              created_at: new Date().toISOString(),
-              avatar: "avatar5.svg"
-            }
-          ]);
-      }
+  // Profile row will be inserted after email verification via auth state change
       setSuccess("Registration successful! Please check your email to verify your account. Redirecting to login...");
       setTimeout(() => {
         window.location.href = "/login";
