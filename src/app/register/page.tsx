@@ -37,6 +37,18 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
+      // Insert user profile row
+      if (data?.user) {
+        await supabase
+          .from('profiles')
+          .insert([
+            {
+              id: data.user.id,
+              name,
+              email,
+            }
+          ]);
+      }
       setSuccess("Registration successful! Please check your email to verify your account. Redirecting to login...");
       setTimeout(() => {
         window.location.href = "/login";

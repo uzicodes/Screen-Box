@@ -27,7 +27,7 @@ export default function LoginPage() {
       password,
     });
     if (error) {
-      setError(error.message || "Login failed. Please check your credentials.");
+      setError(error.message || "Login failed. Please check your Credentials.");
     } else {
       window.location.href = "/profile";
     }

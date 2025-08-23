@@ -18,7 +18,7 @@ export default function Profile() {
       if (data?.user) {
         const { data: profileData } = await supabase
           .from('profiles')
-          .select('name, email')
+          .select('name, email, created_at')
           .eq('id', data.user.id)
           .single();
         setProfile(profileData);
@@ -73,7 +73,10 @@ export default function Profile() {
           {profile && (
             <>
               <span className="text-2xl font-semibold text-white mb-2">{profile.name}</span>
-              <span className="text-md text-gray-300 mb-4">{profile.email}</span>
+              <span className="text-md text-gray-300 mb-1">{profile.email}</span>
+              {profile.created_at && (
+                <span className="text-sm text-gray-400 mb-4">Joined: {new Date(profile.created_at).toLocaleDateString()}</span>
+              )}
             </>
           )}
           <div className="flex gap-4 mb-6">
