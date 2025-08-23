@@ -67,7 +67,6 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
-  // Profile row will be inserted after email verification via auth state change
       setSuccess("Registration successful! Please check your email to verify your account. Redirecting to login...");
       setTimeout(() => {
         window.location.href = "/login";
