@@ -37,7 +37,7 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message || "Registration failed. Please check your details.");
     } else {
-      // Insert user profile row
+      // Insert user profile row with all fields
       if (data?.user) {
         await supabase
           .from('profiles')
@@ -46,6 +46,8 @@ export default function RegisterPage() {
               id: data.user.id,
               name,
               email,
+              created_at: new Date().toISOString(),
+              avatar: "avatar5.svg"
             }
           ]);
       }
