@@ -79,6 +79,13 @@ export default function Profile() {
         <div className="w-full md:w-1/3 flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-8">
           <img src={avatar ? `/avatars/${avatar}` : "/avatars/avatar5.svg"} alt="Avatar" className="w-24 h-24 rounded-full mb-4 border-4 border-white/20 object-cover" />
           {profile && (
+            <div className="flex flex-col items-center mb-4">
+              <span style={{ fontWeight: 600, fontSize: '1.1rem', color: '#fff', marginBottom: '0.2rem' }}>{profile.name}</span>
+              <span style={{ fontSize: '0.95rem', color: '#e5e7eb', marginBottom: '0.2rem' }}>{profile.email}</span>
+              <span style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>Joined: {profile.created_at ? new Date(profile.created_at).toLocaleDateString() : ''}</span>
+            </div>
+          )}
+          {profile && (
             <>
               <span className="text-2xl font-semibold text-white mb-2">{profile.name}</span>
               <span className="text-md text-gray-300 mb-1">{profile.email}</span>
