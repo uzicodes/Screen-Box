@@ -5,8 +5,28 @@ export default function Movies() {
     <>
       <Navbar />
       <div className="flex flex-col items-center min-h-screen p-24 pt-36 font-cinzel" style={{ background: 'linear-gradient(to bottom, #18181b 0%, #588157 100%)' }}>
-        <h1 className="text-5xl font-bold text-white mb-8">Movies</h1>
-        <p className="text-lg text-gray-300 mb-8">Browse all movies here.</p>
+  <p className="text-3xl font-bold text-white mb-8">Browse all your movies here</p>
+        <div className="w-full max-w-3xl bg-white/10 rounded-xl shadow-lg p-6 mb-8 flex flex-col md:flex-row gap-4 items-center justify-center">
+          <input
+            type="text"
+            placeholder="Title"
+            className="px-4 py-2 rounded bg-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{ minWidth: 120 }}
+          />
+          <input
+            type="text"
+            placeholder="Genre"
+            className="px-4 py-2 rounded bg-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{ minWidth: 120 }}
+          />
+          <input
+            type="number"
+            placeholder="Year Published"
+            className="px-4 py-2 rounded bg-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{ minWidth: 120 }}
+          />
+          <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition font-semibold">Search</button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
           {[1,2,3,4,5,6].map(i => (
             <div key={i} className="bg-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center">
