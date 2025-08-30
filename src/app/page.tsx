@@ -103,7 +103,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Dummy Section 1 - Trending Now */}
+        {/* Trending Now */}
         <section className="relative w-full mt-24 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Trending Now</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Dummy Section 2 - Recommended For You */}
+        {/* Popular this Month */}
         <section className="relative w-full mt-24 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Popular this Month</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
