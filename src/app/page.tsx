@@ -155,7 +155,7 @@ export default function Home() {
 
         {/* Dummy Section 2 - Recommended For You */}
         <section className="relative w-full mt-24 z-10">
-          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Recommended For You</h3>
+          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Popular this Month</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
               title: "Dummy Rec 1",
@@ -203,9 +203,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Dummy Section 3 - Recently Added */}
+        {/* Recently Added */}
         <section className="relative w-full mt-24 z-10">
-          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Recently Added</h3>
+          <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Web-series</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
               title: "Dummy New 1",
