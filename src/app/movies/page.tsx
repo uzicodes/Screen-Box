@@ -31,9 +31,9 @@ export default function Movies() {
           {[1,2,3,4,5,6].map(i => (
             <div key={i} className="bg-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center">
               <img src={`/c1.jpg`} alt={`Movie ${i}`} className="w-40 h-56 object-cover rounded-lg mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-2">Movie Title {i}</h2>
-              <p className="text-gray-300 mb-2">Genre: Action</p>
-              <p className="text-gray-400 text-sm mb-4">A short description of Movie {i}. This is just a dummy movie card for layout preview.</p>
+              <h2 className="text-2xl font-bold text-yellow-200 mb-2">Movie Title {i}</h2>
+              <p className="text-lg text-white mb-2">Genre: Action</p>
+              <p className="text-md text-white mb-4">A short description of Movie {i}. This is just a dummy movie card for layout preview.</p>
               <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Watch Now</button>
             </div>
           ))}
