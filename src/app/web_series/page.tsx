@@ -8,7 +8,7 @@ export default function WebSeries() {
         <p className="text-3xl font-bold text-white mb-8">Browse all web series here</p>
         <div className="flex flex-col gap-10 w-full max-w-5xl">
           {[1,2,3].map(i => (
-            <div key={i} className="bg-white/10 rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center w-full">
+            <div key={i} className="bg-white/10 rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center w-full transition-transform duration-200 hover:scale-105 hover:bg-white/20 hover:shadow-2xl cursor-pointer">
               <img src={`/c1.jpg`} alt={`Web Series ${i}`} className="w-full md:w-96 h-64 object-cover rounded-lg mb-6 md:mb-0 md:mr-8" />
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h2 className="text-3xl font-bold text-yellow-200 mb-2">Web Series Title {i}</h2>
