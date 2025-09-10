@@ -13,8 +13,9 @@ export default function WebSeries() {
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h2 className="text-3xl font-bold text-yellow-200 mb-2">Web Series Title {i}</h2>
                 <p className="text-lg text-white mb-2">Genre: Drama</p>
-                <p className="text-md text-white mb-4">A longer description of Web Series {i}. This is a dummy card for layout preview. The details section is wide and stretches across the page for a cinematic look. You can add more info here as needed.</p>
                 <p className="text-md text-white mb-2">2022</p>
+                <p className="text-md text-white mb-4">A longer description of Web Series {i}. This is a dummy card for layout preview. The details section is wide and stretches across the page for a cinematic look. You can add more info here as needed.</p>
+                
                 <button className="px-6 py-3 rounded bg-blue-600 text-white hover:bg-blue-700 transition text-lg font-semibold">Watch Now</button>
               </div>
             </div>
