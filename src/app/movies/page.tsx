@@ -5,7 +5,7 @@ export default function Movies() {
     <>
       <Navbar />
       <div className="flex flex-col items-center min-h-screen p-24 pt-36 font-cinzel" style={{ background: 'linear-gradient(to bottom, #18181b 0%, #588157 100%)' }}>
-  <p className="text-3xl font-bold text-white mb-8">Browse all your movies here</p>
+        <p className="text-3xl font-bold text-white mb-8">Browse all your movies here</p>
         <div className="w-full max-w-3xl bg-white/10 rounded-xl shadow-lg p-6 mb-8 flex flex-col md:flex-row gap-4 items-center justify-center">
           <input
             type="text"
@@ -14,12 +14,11 @@ export default function Movies() {
             style={{ minWidth: 120 }}
           />
           <select
-            className="px-4 py-2 rounded bg-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            style={{ minWidth: 120, color: '#18181b', fontWeight: 600 }}
+            className="px-4 py-2 rounded bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{ minWidth: 120, fontWeight: 600 }}
             defaultValue=""
           >
-            <option value="" disabled style={{ color: '#18181b', fontWeight: 700 }}>Genre</option>
-            
+            <option value="" disabled hidden style={{ color: '#9ca3af', fontWeight: 700 }}>Genre</option>
             <option style={{ color: '#18181b' }}>Action</option>
             <option style={{ color: '#18181b' }}>Horror</option>
             <option style={{ color: '#18181b' }}>Thriller</option>
