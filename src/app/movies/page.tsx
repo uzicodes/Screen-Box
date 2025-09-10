@@ -13,12 +13,26 @@ export default function Movies() {
             className="px-4 py-2 rounded bg-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             style={{ minWidth: 120 }}
           />
-          <input
-            type="text"
-            placeholder="Genre"
-            className="px-4 py-2 rounded bg-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            style={{ minWidth: 120 }}
-          />
+          <select
+            className="px-4 py-2 rounded bg-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            style={{ minWidth: 120, color: '#18181b', fontWeight: 600 }}
+            defaultValue=""
+          >
+            <option value="" disabled style={{ color: '#18181b', fontWeight: 700 }}>Genre</option>
+            
+            <option style={{ color: '#18181b' }}>Action</option>
+            <option style={{ color: '#18181b' }}>Horror</option>
+            <option style={{ color: '#18181b' }}>Thriller</option>
+            <option style={{ color: '#18181b' }}>Comedy</option>
+            <option style={{ color: '#18181b' }}>Western</option>
+            <option style={{ color: '#18181b' }}>Drama</option>
+            <option style={{ color: '#18181b' }}>Adventure</option>
+            <option style={{ color: '#18181b' }}>Crime Fiction</option>
+            <option style={{ color: '#18181b' }}>Romance</option>
+            <option style={{ color: '#18181b' }}>Fantasy</option>
+            <option style={{ color: '#18181b' }}>Science Fiction</option>
+            <option style={{ color: '#18181b' }}>History</option>
+          </select>
           <input
             type="number"
             placeholder="Year Published"
