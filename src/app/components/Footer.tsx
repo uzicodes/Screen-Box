@@ -2,14 +2,15 @@
 // Footer component for all pages
 import { useState } from 'react';
 export default function Footer() {
-  const [showModal, setShowModal] = useState(false);
+  const [showContacts, setShowContacts] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   return (
     <>
       <footer className="w-full bg-gray-900/80 backdrop-blur-lg border-t border-white/20 mt-0" style={{ fontFamily: 'Lora, serif' }}>
         <div className="max-w-5xl mx-auto flex items-center justify-between px-8 py-3">
           <div className="flex gap-6">
-            <a href="#" className="text-gray-200 hover:text-yellow-300 font-semibold transition">About</a>
-            <button onClick={() => setShowModal(true)} className="text-gray-200 hover:text-yellow-300 font-semibold transition focus:outline-none bg-transparent">Contacts</button>
+            <button onClick={() => setShowAbout(true)} className="text-gray-200 hover:text-yellow-300 font-semibold transition focus:outline-none bg-transparent">About</button>
+            <button onClick={() => setShowContacts(true)} className="text-gray-200 hover:text-yellow-300 font-semibold transition focus:outline-none bg-transparent">Contacts</button>
           </div>
           <div className="flex-1 flex justify-center">
             <span className="text-gray-200 text-base flex items-center gap-2">
@@ -23,10 +24,10 @@ export default function Footer() {
           <span className="text-gray-400 text-sm">&copy; 2025 Screen Box. All rights reserved.</span>
         </div>
       </footer>
-      {showModal && (
+      {showContacts && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center min-w-[320px] relative" style={{ fontFamily: 'Lora, serif' }}>
-            <button onClick={() => setShowModal(false)} className="absolute top-2 right-2 text-gray-400 hover:text-red-400 text-2xl font-bold">&times;</button>
+            <button onClick={() => setShowContacts(false)} className="absolute top-2 right-2 text-gray-400 hover:text-red-400 text-2xl font-bold">&times;</button>
             <h2 className="text-xl font-bold text-white mb-4">Connect with us</h2>
             <div className="flex gap-6 mb-2">
               <a href="https://github.com/uzicodes" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-yellow-300 text-2xl" title="GitHub">
@@ -51,6 +52,22 @@ export default function Footer() {
               </a>
             </div>
             <span className="text-gray-400 text-xs">@uzicodes</span>
+          </div>
+        </div>
+      )}
+
+      {showAbout && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center min-w-[320px] max-w-lg relative" style={{ fontFamily: 'Lora, serif' }}>
+            <button onClick={() => setShowAbout(false)} className="absolute top-2 right-2 text-gray-400 hover:text-red-400 text-2xl font-bold">&times;</button>
+            <h2 className="text-xl font-bold text-white mb-4">About Us</h2>
+            <p className="text-gray-200 text-base leading-relaxed text-center whitespace-pre-line">
+              Welcome to our movie streaming website, your ultimate destination for cinematic entertainment. We're passionate about bringing the magic of movies directly to you, offering a diverse and high-quality selection of films from around the globe.
+
+We believe that great stories should be accessible to everyone, everywhere. Our mission is to provide a seamless and enjoyable streaming experience, with a user-friendly interface that makes it easy to discover new favorites and revisit classic gems. Whether you're in the mood for an action-packed blockbuster, a thought-provoking documentary, a heartwarming romance, or a laugh-out-loud comedy, our extensive library has something for every taste and occasion.
+
+We are dedicated to continuously expanding our collection, ensuring you always have fresh and exciting content to explore. Grab your popcorn, get comfortable, and get ready to stream your next favorite movie with us!
+            </p>
           </div>
         </div>
       )}
