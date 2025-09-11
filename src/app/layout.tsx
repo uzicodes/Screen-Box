@@ -1,5 +1,7 @@
+
 import type { ReactNode } from 'react';
 import './globals.css';
+import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Screen Box',
@@ -38,7 +40,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
