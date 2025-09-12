@@ -5,7 +5,7 @@ export default function Movies() {
     <>
       <Navbar />
       <div className="flex flex-col items-center min-h-screen p-24 pt-36 font-cinzel" style={{ background: 'linear-gradient(to bottom, #18181b 0%, #588157 100%)' }}>
-        <p className="text-3xl font-bold text-white mb-8">Browse all your movies here</p>
+        <p className="text-3xl font-bold text-white mb-8">Browse all your movies</p>
         <div className="w-full max-w-3xl bg-white/10 rounded-xl shadow-lg p-6 mb-8 flex flex-col md:flex-row gap-4 items-center justify-center">
           <input
             type="text"
