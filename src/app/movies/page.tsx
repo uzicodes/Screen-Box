@@ -47,7 +47,7 @@ export default function Movies() {
               <h2 className="text-2xl font-bold text-yellow-200 mb-2">Movie Title {i}</h2>
               <p className="text-lg text-white mb-2">Genre: Action</p>
               <p className="text-md text-gray-300 mb-2">2022</p>
-                <p className="text-md text-gray-400 font-normal mb-4 text-center">A short description of Movie {i}. This is just a dummy movie card for layout preview.</p>
+             <p className="text-md text-black font-normal mb-4 text-center">A short description of Movie {i}. This is just a dummy movie card for layout preview.</p>
               <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Watch Now</button>
             </div>
           ))}
