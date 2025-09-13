@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export default function Home() {
   const streamingLogos = [
-    { name: "Discovery", src: "/carousel/discovery.svg" },
     { name: "Disney", src: "/carousel/disney.svg" },
-    { name: "HBO", src: "/carousel/hbo.svg" },
+    { name: "HBO", src: "/carousel/hbo.png" },
     { name: "Hulu", src: "/carousel/hulu.svg" },
     { name: "Netflix", src: "/carousel/netflix.svg" },
-    { name: "Paramount", src: "/carousel/paramount.svg" }
+    { name: "Paramount", src: "/carousel/paramount.svg" },
+    { name: "Apple", src: "/carousel/apple.svg" }
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* Rolling Carousel of Streaming Logos */}
-        <section className="relative w-full mt-16 z-10 overflow-hidden">
+  <section className="relative w-full mt-40 z-10 overflow-hidden">
           <div className="flex items-center">
             <div className="flex animate-scroll">
               {/* First set of logos */}
@@ -72,7 +72,8 @@ export default function Home() {
                   <img 
                     src={logo.src} 
                     alt={logo.name} 
-                    className="h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                    className={`${logo.name === 'HBO' ? 'h-14' : logo.name === 'Hulu' ? 'h-8' : 'h-10'} w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300${logo.name === 'Apple' ? ' filter invert' : ''}`}
+                    style={logo.name === 'Hulu' ? { filter: 'brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(500%) hue-rotate(80deg) brightness(1.2)' } : {}}
                   />
                 </div>
               ))}
@@ -82,7 +83,8 @@ export default function Home() {
                   <img 
                     src={logo.src} 
                     alt={logo.name} 
-                    className="h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                    className={`${logo.name === 'HBO' ? 'h-14' : logo.name === 'Hulu' ? 'h-8' : 'h-10'} w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300${logo.name === 'Apple' ? ' filter invert' : ''}`}
+                    style={logo.name === 'Hulu' ? { filter: 'brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(500%) hue-rotate(80deg) brightness(1.2)' } : {}}
                   />
                 </div>
               ))}
@@ -91,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* Filmstrip/Carousel for movies */}
-        <section className="relative w-full mt-48 z-10">
+  <section className="relative w-full mt-24 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Movies</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
@@ -141,7 +143,7 @@ export default function Home() {
         </section>
 
         {/* Trending Now */}
-        <section className="relative w-full mt-24 z-10">
+  <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Trending Now</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
@@ -191,7 +193,7 @@ export default function Home() {
         </section>
 
         {/* Popular this Month */}
-        <section className="relative w-full mt-24 z-10">
+  <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Popular this Month</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
@@ -241,7 +243,7 @@ export default function Home() {
         </section>
 
         {/* Recently Added */}
-        <section className="relative w-full mt-24 z-10">
+  <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Web-series</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
