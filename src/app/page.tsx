@@ -3,10 +3,19 @@ import Navbar from "./components/Navbar";
 import Link from "next/link";
 
 export default function Home() {
+  const streamingLogos = [
+    { name: "Discovery", src: "/carousel/discovery.svg" },
+    { name: "Disney", src: "/carousel/disney.svg" },
+    { name: "HBO", src: "/carousel/hbo.svg" },
+    { name: "Hulu", src: "/carousel/hulu.svg" },
+    { name: "Netflix", src: "/carousel/netflix.svg" },
+    { name: "Paramount", src: "/carousel/paramount.svg" }
+  ];
+
   return (
     <>
       <Navbar />
-  <main className="relative flex min-h-screen flex-col items-center justify-between p-24 font-cinzel" style={{ background: 'linear-gradient(to bottom, transparent 700px, #001220 700px, #001220 100%)' }}>
+      <main className="relative flex min-h-screen flex-col items-center justify-between p-24 font-cinzel" style={{ background: 'linear-gradient(to bottom, transparent 700px, #001220 700px, #001220 100%)' }}>
         {/* Blurred background image from top to bottom before featured movies */}
         <div className="absolute top-0 left-0 w-full h-[700px] z-0">
           <img src="/c1.jpg" alt="Background" className="w-full h-full object-cover blur-[4px] brightness-75" />
@@ -14,14 +23,13 @@ export default function Home() {
 
         {/* Conic gradient section directly below blurred image */}
         <div className="w-full h-32 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827]" />
-  <div className="relative flex flex-col items-center w-full mt-0 z-10">
+        
+        <div className="relative flex flex-col items-center w-full mt-0 z-10">
           <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
           <h1 className="text-8xl font-bold text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>SCREEN  BOX</h1>
           <br></br>
           <h2 className="text-2xl text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>nothing to pay, Enjoy !</h2>
-          {/* Login Button */}
-          {/* Login Button with redirect */}
-          {/* Add useRouter for navigation */}
+          
           <Link
             href="/login"
             style={{
@@ -53,8 +61,37 @@ export default function Home() {
             </svg>
           </Link>
         </div>
-  {/* Filmstrip/Carousel for movies */}
-  <section className="relative w-full mt-48 z-10">
+
+        {/* Rolling Carousel of Streaming Logos */}
+        <section className="relative w-full mt-16 z-10 overflow-hidden">
+          <div className="flex items-center">
+            <div className="flex animate-scroll">
+              {/* First set of logos */}
+              {streamingLogos.map((logo, idx) => (
+                <div key={`first-${idx}`} className="flex-shrink-0 mx-8">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.name} 
+                    className="h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {streamingLogos.map((logo, idx) => (
+                <div key={`second-${idx}`} className="flex-shrink-0 mx-8">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.name} 
+                    className="h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Filmstrip/Carousel for movies */}
+        <section className="relative w-full mt-48 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Movies</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[{
@@ -252,8 +289,37 @@ export default function Home() {
             ))}
           </div>
         </section>
+        
         {/* Footer Navbar - now handled globally in layout */}
       </main>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 30s linear infinite;
+        }
+        
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+        
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 }
