@@ -29,6 +29,14 @@ export default function Home() {
           <h1 className="text-8xl font-bold text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>SCREEN  BOX</h1>
           <br></br>
           <h2 className="text-2xl text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>nothing to pay, Enjoy !</h2>
+
+          {/* Transparent Search Bar */}
+          <input
+            type="text"
+            placeholder="Search..."
+            className="mt-6 mb-2 px-6 py-3 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full max-w-xs text-lg shadow-lg backdrop-blur-sm border border-white/30"
+            style={{ fontFamily: 'Maragsa Display, sans-serif', fontWeight: 400 }}
+          />
           
           <Link
             href="/login"
@@ -322,27 +330,6 @@ export default function Home() {
           display: none;
         }
       `}</style>
-      {/* Contact Links */}
-      <footer className="w-full flex flex-col items-center mt-12 mb-4 z-20">
-        <div className="flex gap-6">
-          <a href="https://github.com/uzicodes" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-lg font-semibold flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.687-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.594 1.028 2.687 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.577.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
-            GitHub
-          </a>
-          <a href="https://instagram.com/utsh0x" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 text-lg font-semibold flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a6.25 6.25 0 1 1-6.25 6.25a6.25 6.25 0 0 1 6.25-6.25zm0 1.5a4.75 4.75 0 1 0 4.75 4.75a4.75 4.75 0 0 0-4.75-4.75zm6.5 1.25a1.25 1.25 0 1 1-1.25 1.25a1.25 1.25 0 0 1 1.25-1.25z"/></svg>
-            Instagram
-          </a>
-          <a href="https://www.linkedin.com/in/utsho-heaven-chowdhury/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-lg font-semibold flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
-            LinkedIn
-          </a>
-          <a href="mailto:utshozi11@gmail.com" className="text-white hover:text-blue-400 text-lg font-semibold flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l7.29 6.71c.39.36 1.02.36 1.41 0L20 8.99V20H4z"/></svg>
-            utshozi11@gmail.com
-          </a>
-        </div>
-      </footer>
     </>
   );
 }
