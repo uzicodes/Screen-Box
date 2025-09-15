@@ -30,13 +30,21 @@ export default function Home() {
           <br></br>
           <h2 className="text-2xl text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>nothing to pay, Enjoy !</h2>
 
-          {/* Transparent Search Bar */}
-          <input
-            type="text"
-            placeholder="Search..."
-            className="mt-6 mb-2 px-6 py-2 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full max-w-xs text-lg shadow-lg backdrop-blur-sm border border-white/30"
-            style={{ fontFamily: 'Maragsa Display, sans-serif', fontWeight: 400 }}
-          />
+
+          {/* Transparent Search Bar with Arrow Icon */}
+          <form className="relative mt-6 mb-2 w-full max-w-xs" onSubmit={e => { e.preventDefault(); }}>
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full px-6 py-2 pr-12 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 text-lg shadow-lg backdrop-blur-sm border border-white/30"
+              style={{ fontFamily: 'Maragsa Display, sans-serif', fontWeight: 400 }}
+            />
+            <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white opacity-80 pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 5l8 7-8 7" />
+              </svg>
+            </span>
+          </form>
           
           <Link
             href="/login"
