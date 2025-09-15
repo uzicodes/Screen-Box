@@ -34,7 +34,7 @@ export default function Home() {
           <input
             type="text"
             placeholder="Search..."
-            className="mt-6 mb-2 px-6 py-3 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full max-w-xs text-lg shadow-lg backdrop-blur-sm border border-white/30"
+            className="mt-6 mb-2 px-6 py-2 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full max-w-xs text-lg shadow-lg backdrop-blur-sm border border-white/30"
             style={{ fontFamily: 'Maragsa Display, sans-serif', fontWeight: 400 }}
           />
           
@@ -51,7 +51,7 @@ export default function Home() {
               display: 'flex',
               alignItems: 'center',
               fontSize: '15px',
-              marginTop: '24px',
+              marginTop: '12px',
               textDecoration: 'none',
               color: 'black',
             }}
