@@ -129,29 +129,33 @@ export default function Home() {
                 desc: "A team travels through a wormhole in space in an attempt to ensure humanity's survival."
               },
               {
-                title: "The Dark Knight",
-                genre: "Action",
-                year: 2008,
-                img: "/android-icon-72x72.png",
-                desc: "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
+                title: "Parasite",
+                genre: "Thriller",
+                year: 2019,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/parasite.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9wYXJhc2l0ZS5qcGciLCJpYXQiOjE3NTgwMTUwNTEsImV4cCI6MjM4ODczNTA1MX0.29kGF14_1ekaDXOx0ZJmiyVZZF6Ias1QNdBsIYPSlIQ",
+                desc: "A poor family schemes to become employed by a wealthy family and infiltrate their household."
               },
               {
                 title: "Avatar",
                 genre: "Fantasy",
                 year: 2009,
-                img: "/android-icon-96x96.png",
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/avatar.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9hdmF0YXIuanBnIiwiaWF0IjoxNzU4MDE0NTA4LCJleHAiOjIzODg3MzQ1MDh9.K4EjF5I63UA0oCmjDQHHr1OSsSzdEobm6V506bo4hcE",
                 desc: "A paraplegic Marine dispatched to Pandora becomes torn between following orders and protecting the world."
               },
               {
                 title: "Titanic",
                 genre: "Romance",
                 year: 1997,
-                img: "/android-icon-48x48.png",
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/titanic.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy90aXRhbmljLmpwZyIsImlhdCI6MTc1ODAxNDU0MSwiZXhwIjoyMzg4NzM0NTQxfQ.yScTTtmhe18dcciS8nfImxoFVbcIn_0JfBjvw5B_8pQ",
                 desc: "A love story unfolds on the ill-fated RMS Titanic."
               }
             ].map((movie, idx) => (
               <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
-                <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
+                <img
+                  src={movie.img}
+                  alt={movie.title}
+                  className="rounded-lg mb-4 object-cover w-40 h-56"
+                />
                 <span className="text-lg font-semibold text-white">{movie.title}</span>
                 <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
                 {/* Details on hover */}
