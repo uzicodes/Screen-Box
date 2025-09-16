@@ -118,7 +118,7 @@ export default function Home() {
                 title: "Inception",
                 genre: "Sci-Fi",
                 year: 2010,
-                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/inception.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2luY2VwdGlvbi5qcGciLCJpYXQiOjE3NTgwMTA5NDgsImV4cCI6MjM4ODczMDk0OH0.93FfiwCdsrVXLOYGw0Ir0q0wM4MZV2EVrzgxI-Aq0TA",
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/inception.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9pbmNlcHRpb24uanBnIiwiaWF0IjoxNzU4MDE1NDkxLCJleHAiOjIzODg3MzU0OTF9.GQmbMaH4HR5xfQQP4DgA0qvbznJxaBUvcLce4VuoHks",
                 desc: "A thief who steals corporate secrets through dream-sharing technology."
               },
               {
