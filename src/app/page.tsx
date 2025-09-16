@@ -25,19 +25,20 @@ export default function Home() {
         <div className="w-full h-32 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827]" />
         
         <div className="relative flex flex-col items-center w-full mt-0 z-10">
-          <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain" />
-          <h1 className="text-8xl font-bold text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>SCREEN  BOX</h1>
+          <img src="/logo.png" alt="Logo" className="mx-auto mb-6 w-32 h-32 object-contain -mt-16" />
+          <h1 className="text-8xl font-bold text-white -mt-3" style={{fontFamily: 'Maragsa Display, sans-serif'}}>SCREEN  BOX</h1>
           <br></br>
-          <h2 className="text-2xl text-white" style={{fontFamily: 'Maragsa Display, sans-serif'}}>nothing to pay, Enjoy !</h2>
+                <h2 className="text-2xl text-white" style={{fontFamily: 'Lora, serif'}}>nothing to pay, Enjoy !</h2>
 
 
           {/* Transparent Search Bar with Arrow Icon */}
+
           <form className="relative mt-6 mb-2 w-full max-w-xs" onSubmit={e => { e.preventDefault(); }}>
             <input
               type="text"
               placeholder="Search..."
-              className="w-full px-6 py-2 pr-12 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 text-lg shadow-lg backdrop-blur-sm border border-white/30"
-              style={{ fontFamily: 'Maragsa Display, sans-serif', fontWeight: 400 }}
+              className="w-full px-6 py-0.5 pr-12 rounded-full bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 text-lg shadow-lg backdrop-blur-sm border border-white/30 font-lora"
+              style={{ fontFamily: 'Lora, serif', fontWeight: 400 }}
             />
             <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white opacity-80 pointer-events-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
