@@ -74,7 +74,7 @@ export default function Home() {
               stroke="currentColor"
               style={{ width: '34px', marginLeft: '10px', transition: 'transform 0.3s ease-in-out' }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013 3v1" />
             </svg>
           </Link>
         </div>
@@ -173,39 +173,49 @@ export default function Home() {
   <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Trending Now</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
-            {[{
-              title: "Dummy Movie 1",
-              genre: "Action",
-              year: 2022,
-              img: "/android-icon-144x144.png",
-              desc: "Description for Dummy Movie 1."
-            },{
-              title: "Dummy Movie 2",
-              genre: "Drama",
-              year: 2023,
-              img: "/android-icon-192x192.png",
-              desc: "Description for Dummy Movie 2."
-            },{
-              title: "Dummy Movie 3",
-              genre: "Comedy",
-              year: 2021,
-              img: "/android-icon-72x72.png",
-              desc: "Description for Dummy Movie 3."
-            },{
-              title: "Dummy Movie 4",
-              genre: "Horror",
-              year: 2020,
-              img: "/android-icon-96x96.png",
-              desc: "Description for Dummy Movie 4."
-            },{
-              title: "Dummy Movie 5",
-              genre: "Sci-Fi",
-              year: 2024,
-              img: "/android-icon-48x48.png",
-              desc: "Description for Dummy Movie 5."
-            }].map((movie, idx) => (
+            {[
+              {
+                title: "Jurassic World -Rebirth",
+                genre: "Action",
+                year: 2025,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/jurassic.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvanVyYXNzaWMuanBnIiwiaWF0IjoxNzU4MDE5NjU1LCJleHAiOjIzODg3Mzk2NTV9.TQgdwqFCVuzTpwZCFMWwfU7UGgcUja7LaqkfFUQedfU",
+                desc: "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur."
+              },
+              {
+                title: "Ballerina",
+                genre: "Action",
+                year: 2025,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/ballerina.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvYmFsbGVyaW5hLmpwZyIsImlhdCI6MTc1ODAxOTY5MywiZXhwIjoyMzg4NzM5NjkzfQ.S2VYsCElahsABVH79Rfgn_0NHzXUTA7ZZW0l2QlOx_U",
+                desc: "A young woman seeks revenge against those who orchestrated her family's murder in this action thriller."
+              },
+              {
+                title: "How to Train Your Dragon",
+                genre: "Animation",
+                year: 2025,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/how%20to%20train%20your%20dragon.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvaG93IHRvIHRyYWluIHlvdXIgZHJhZ29uLmpwZyIsImlhdCI6MTc1ODAxOTgyMiwiZXhwIjoyMzg4NzM5ODIyfQ.vLgoz9O2-MyeGg2VxU6X7AArriEwSYVUxqXBPal5QJg",
+                desc: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself."
+              },
+              {
+                title: "The Raid 2",
+                genre: "Action",
+                year: 2025,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/raid%202.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvcmFpZCAyLmpwZyIsImlhdCI6MTc1ODAxOTg1NiwiZXhwIjoyMzg4NzM5ODU2fQ.GzVcOOOlWh7JA70OGEy2p6ooqBr5WXFNn7dxrT0rXq0",
+                desc: "In 1989 Rajasthan, IPS officer Patnaik raids a palace but fails. Suspended after a failed raid, he uncovers hidden truths."
+              },
+              {
+                title: "Sinners",
+                genre: "Horror",
+                year: 2025,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/sinners.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvc2lubmVycy5qcGciLCJpYXQiOjE3NTgwMTk4NzUsImV4cCI6MjM4ODczOTg3NX0.CRCSL3mXOBAp-XPYedaTKlCVKQBbpqrr9XX_OMbcXbk",
+                desc: "Twin brothers return to their hometown to confront a violent past that still haunts them."
+              }
+            ].map((movie, idx) => (
               <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
-                <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
+                <img
+                  src={movie.img}
+                  alt={movie.title}
+                  className="rounded-lg mb-4 object-cover w-40 h-56"
+                />
                 <span className="text-lg font-semibold text-white">{movie.title}</span>
                 <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
                 {/* Details on hover */}
