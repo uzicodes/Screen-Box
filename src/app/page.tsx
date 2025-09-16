@@ -113,37 +113,43 @@ export default function Home() {
   <section className="relative w-full mt-24 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Movies</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
-            {[{
-              title: "Inception",
-              genre: "Sci-Fi",
-              year: 2010,
-              img: "/android-icon-144x144.png",
-              desc: "A thief who steals corporate secrets through dream-sharing technology."
-            },{
-              title: "Interstellar",
-              genre: "Adventure",
-              year: 2014,
-              img: "/android-icon-192x192.png",
-              desc: "A team travels through a wormhole in space in an attempt to ensure humanity's survival."
-            },{
-              title: "The Dark Knight",
-              genre: "Action",
-              year: 2008,
-              img: "/android-icon-72x72.png",
-              desc: "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
-            },{
-              title: "Avatar",
-              genre: "Fantasy",
-              year: 2009,
-              img: "/android-icon-96x96.png",
-              desc: "A paraplegic Marine dispatched to Pandora becomes torn between following orders and protecting the world."
-            },{
-              title: "Titanic",
-              genre: "Romance",
-              year: 1997,
-              img: "/android-icon-48x48.png",
-              desc: "A love story unfolds on the ill-fated RMS Titanic."
-            }].map((movie, idx) => (
+            {[
+              {
+                title: "Inception",
+                genre: "Sci-Fi",
+                year: 2010,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/inception.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2luY2VwdGlvbi5qcGciLCJpYXQiOjE3NTgwMTA5NDgsImV4cCI6MjM4ODczMDk0OH0.93FfiwCdsrVXLOYGw0Ir0q0wM4MZV2EVrzgxI-Aq0TA",
+                desc: "A thief who steals corporate secrets through dream-sharing technology."
+              },
+              {
+                title: "Interstellar",
+                genre: "Adventure",
+                year: 2014,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/interstellar.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9pbnRlcnN0ZWxsYXIuanBnIiwiaWF0IjoxNzU4MDExMTk2LCJleHAiOjIzODg3MzExOTZ9.0oEFa64GbIIMcKB3ZdDAUsILEpyMq7K4hJv61X1oHcE",
+                desc: "A team travels through a wormhole in space in an attempt to ensure humanity's survival."
+              },
+              {
+                title: "The Dark Knight",
+                genre: "Action",
+                year: 2008,
+                img: "/android-icon-72x72.png",
+                desc: "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
+              },
+              {
+                title: "Avatar",
+                genre: "Fantasy",
+                year: 2009,
+                img: "/android-icon-96x96.png",
+                desc: "A paraplegic Marine dispatched to Pandora becomes torn between following orders and protecting the world."
+              },
+              {
+                title: "Titanic",
+                genre: "Romance",
+                year: 1997,
+                img: "/android-icon-48x48.png",
+                desc: "A love story unfolds on the ill-fated RMS Titanic."
+              }
+            ].map((movie, idx) => (
               <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
                 <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
                 <span className="text-lg font-semibold text-white">{movie.title}</span>
