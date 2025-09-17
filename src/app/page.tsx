@@ -229,50 +229,60 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Popular this Month */}
+        {/* Anime Recommendations */}
   <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Anime Recommendations</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
-            {[{
-              title: "Dummy Rec 1",
-              genre: "Adventure",
-              year: 2022,
-              img: "/android-icon-144x144.png",
-              desc: "Description for Dummy Rec 1."
-            },{
-              title: "Dummy Rec 2",
-              genre: "Romance",
-              year: 2023,
-              img: "/android-icon-192x192.png",
-              desc: "Description for Dummy Rec 2."
-            },{
-              title: "Dummy Rec 3",
-              genre: "Thriller",
-              year: 2021,
-              img: "/android-icon-72x72.png",
-              desc: "Description for Dummy Rec 3."
-            },{
-              title: "Dummy Rec 4",
-              genre: "Fantasy",
-              year: 2020,
-              img: "/android-icon-96x96.png",
-              desc: "Description for Dummy Rec 4."
-            },{
-              title: "Dummy Rec 5",
-              genre: "Documentary",
-              year: 2024,
-              img: "/android-icon-48x48.png",
-              desc: "Description for Dummy Rec 5."
-            }].map((movie, idx) => (
+            {[
+              {
+                title: "Kiki's Delivery Service",
+                genre: "Fantasy",
+                year: 1989,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/anime/kikis%20delivery%20service.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2FuaW1lL2tpa2lzIGRlbGl2ZXJ5IHNlcnZpY2UuanBnIiwiaWF0IjoxNzU4MTMyMjYwLCJleHAiOjIzODg4NTIyNjB9.4ER9Xp9giUsNDHxOLWD_CxIoZChoAzbHz0sskif3FNw",
+                desc: "A young witch moves to a new town and uses her flying ability to earn a living in this charming coming-of-age story."
+              },
+              {
+                title: "Howl's Moving Castle",
+                genre: "Fantasy",
+                year: 2004,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/anime/howl's%20moving%20castle.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2FuaW1lL2hvd2wncyBtb3ZpbmcgY2FzdGxlLmpwZyIsImlhdCI6MTc1ODEzMjMwMCwiZXhwIjoyMzg4ODUyMzAwfQ.BD1th8Xr2j_SWAcaY7j0Mok7W97OLqI4QN5bG8PJcgU",
+                desc: "A young woman cursed with an old body seeks the wizard Howl for help, discovering magic and love along the way."
+              },
+              {
+                title: "My Neighbor Totoro",
+                genre: "Family",
+                year: 1988,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/anime/my%20neighbor%20totoro.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2FuaW1lL215IG5laWdoYm9yIHRvdG9yby5qcGciLCJpYXQiOjE3NTgxMzIzNDAsImV4cCI6MjM4ODg1MjM0MH0.y59tDeSzAWhxW-zNN9ULaLiFpoK4BZxYSgt9Q8_UY6s",
+                desc: "Two young girls discover magical forest spirits near their new home in the Japanese countryside."
+              },
+              {
+                title: "Spirited Away",
+                genre: "Adventure",
+                year: 2001,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/anime/spirited%20away.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2FuaW1lL3NwaXJpdGVkIGF3YXkuanBnIiwiaWF0IjoxNzU4MTMyMzYwLCJleHAiOjIzODg4NTIzNjB9.2Fw_NM09ol2et9cBUbTvqVGIH2lNwEmiZzagfjbmxqs",
+                desc: "A young girl must work in a magical bathhouse to save her parents who have been turned into pigs."
+              },
+              {
+                title: "The Wind Rises",
+                genre: "Drama",
+                year: 2013,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/anime/the%20wind%20rises.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL2FuaW1lL3RoZSB3aW5kIHJpc2VzLmpwZyIsImlhdCI6MTc1ODEzMjM4NCwiZXhwIjoyMzg4ODUyMzg0fQ.-cI01J0nKyXjj3hwBknHyQNrGTIrvePDEaUrwPhP3ZQ",
+                desc: "The life of Jiro Horikoshi, the man who designed Japanese fighter planes during World War II."
+              }
+            ].map((anime, idx) => (
               <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
-                <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
-                <span className="text-lg font-semibold text-white">{movie.title}</span>
-                <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
+                <img
+                  src={anime.img}
+                  alt={anime.title}
+                  className="rounded-lg mb-4 object-cover w-40 h-56"
+                />
+                <span className="text-lg font-semibold text-white">{anime.title}</span>
+                <span className="text-sm text-gray-300">{anime.genre} • {anime.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
-                  <span className="text-lg font-bold mb-2">{movie.title}</span>
-                  <span className="text-sm mb-2">{movie.genre} • {movie.year}</span>
-                  <span className="text-xs text-center">{movie.desc}</span>
+                  <span className="text-lg font-bold mb-2">{anime.title}</span>
+                  <span className="text-sm mb-2">{anime.genre} • {anime.year}</span>
+                  <span className="text-xs text-center">{anime.desc}</span>
                 </div>
               </div>
             ))}
