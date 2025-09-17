@@ -156,7 +156,7 @@ export default function Home() {
                   alt={movie.title}
                   className="rounded-lg mb-4 object-cover w-40 h-56"
                 />
-                <span className="text-lg font-semibold text-white">{movie.title}</span>
+                <span className="text-lg font-semibold" style={{ color: '#E85033' }}>{movie.title}</span>
                 <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
@@ -216,7 +216,7 @@ export default function Home() {
                   alt={movie.title}
                   className="rounded-lg mb-4 object-cover w-40 h-56"
                 />
-                <span className="text-lg font-semibold text-white">{movie.title}</span>
+                <span className="text-lg font-semibold" style={{ color: '#E85033' }}>{movie.title}</span>
                 <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
@@ -276,7 +276,7 @@ export default function Home() {
                   alt={anime.title}
                   className="rounded-lg mb-4 object-cover w-40 h-56"
                 />
-                <span className="text-lg font-semibold text-white">{anime.title}</span>
+                <span className="text-lg font-semibold" style={{ color: '#E85033' }}>{anime.title}</span>
                 <span className="text-sm text-gray-300">{anime.genre} • {anime.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
@@ -336,7 +336,7 @@ export default function Home() {
                   alt={series.title}
                   className="rounded-lg mb-4 object-cover w-40 h-56"
                 />
-                <span className="text-lg font-semibold text-white">{series.title}</span>
+                <span className="text-lg font-semibold" style={{ color: '#E85033' }}>{series.title}</span>
                 <span className="text-sm text-gray-300">{series.genre} • {series.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
