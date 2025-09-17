@@ -175,9 +175,9 @@ export default function Home() {
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
             {[
               {
-                title: "Jurassic World -Rebirth",
+                title: "Jurassic World",
                 genre: "Action",
-                year: 2025,
+                year: 2015,
                 img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/jurassic.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvanVyYXNzaWMuanBnIiwiaWF0IjoxNzU4MDE5NjU1LCJleHAiOjIzODg3Mzk2NTV9.TQgdwqFCVuzTpwZCFMWwfU7UGgcUja7LaqkfFUQedfU",
                 desc: "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur."
               },
@@ -191,16 +191,16 @@ export default function Home() {
               {
                 title: "How to Train Your Dragon",
                 genre: "Animation",
-                year: 2025,
+                year: 2010,
                 img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/how%20to%20train%20your%20dragon.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvaG93IHRvIHRyYWluIHlvdXIgZHJhZ29uLmpwZyIsImlhdCI6MTc1ODAxOTgyMiwiZXhwIjoyMzg4NzM5ODIyfQ.vLgoz9O2-MyeGg2VxU6X7AArriEwSYVUxqXBPal5QJg",
                 desc: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself."
               },
               {
                 title: "The Raid 2",
                 genre: "Action",
-                year: 2025,
+                year: 2014,
                 img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/Trending%20now/raid%202.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9UcmVuZGluZyBub3cvcmFpZCAyLmpwZyIsImlhdCI6MTc1ODAxOTg1NiwiZXhwIjoyMzg4NzM5ODU2fQ.GzVcOOOlWh7JA70OGEy2p6ooqBr5WXFNn7dxrT0rXq0",
-                desc: "In 1989 Rajasthan, IPS officer Patnaik raids a palace but fails. Suspended after a failed raid, he uncovers hidden truths."
+                desc: "Only a short time after the first raid, Rama goes undercover with the thugs of Jakarta to uncover corruption."
               },
               {
                 title: "Sinners",
@@ -279,50 +279,60 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recently Added */}
+        {/* Featured Web-series */}
   <section className="relative w-full mt-12 z-10">
           <h3 className="text-3xl font-bold text-white mb-6 ml-4">Featured Web-series</h3>
           <div className="flex overflow-x-auto gap-6 px-4 pb-4 hide-scrollbar">
-            {[{
-              title: "Dummy New 1",
-              genre: "Mystery",
-              year: 2022,
-              img: "/android-icon-144x144.png",
-              desc: "Description for Dummy New 1."
-            },{
-              title: "Dummy New 2",
-              genre: "Biography",
-              year: 2023,
-              img: "/android-icon-192x192.png",
-              desc: "Description for Dummy New 2."
-            },{
-              title: "Dummy New 3",
-              genre: "Crime",
-              year: 2021,
-              img: "/android-icon-72x72.png",
-              desc: "Description for Dummy New 3."
-            },{
-              title: "Dummy New 4",
-              genre: "Animation",
-              year: 2020,
-              img: "/android-icon-96x96.png",
-              desc: "Description for Dummy New 4."
-            },{
-              title: "Dummy New 5",
-              genre: "Family",
-              year: 2024,
-              img: "/android-icon-48x48.png",
-              desc: "Description for Dummy New 5."
-            }].map((movie, idx) => (
+            {[
+              {
+                title: "Game of Thrones",
+                genre: "Fantasy",
+                year: 2011,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/web-series/GOT.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL3dlYi1zZXJpZXMvR09ULmpwZyIsImlhdCI6MTc1ODExNjY0MSwiZXhwIjoyMzg4ODM2NjQxfQ.8VnUzcDQY7W2JlzC7aZOcdYTKwB2axvXtVt7a-DqJPg",
+                desc: "Nine noble families wage war against each other in order to gain control over the mythical land of Westeros."
+              },
+              {
+                title: "Breaking Bad",
+                genre: "Crime",
+                year: 2008,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/web-series/BB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL3dlYi1zZXJpZXMvQkIuanBnIiwiaWF0IjoxNzU4MTE2NjU3LCJleHAiOjIzODg4MzY2NTd9.5JvqvMh3KKD-Yqq23V6m3uZ-PyIwCpBtiz7RnRF5eNk",
+                desc: "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student."
+              },
+              {
+                title: "Stranger Things",
+                genre: "Sci-Fi",
+                year: 2016,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/web-series/ST.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL3dlYi1zZXJpZXMvU1QuanBnIiwiaWF0IjoxNzU4MTE2Njc0LCJleHAiOjIzODg4MzY2NzR9.iBV3YyQiTw71IgNhke2_5Zk70iMGAfHRtcXe2PHedzc",
+                desc: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments and supernatural forces."
+              },
+              {
+                title: "Mirzapur",
+                genre: "Crime",
+                year: 2018,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/web-series/mirzapur.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL3dlYi1zZXJpZXMvbWlyemFwdXIuanBnIiwiaWF0IjoxNzU4MTE2Njg5LCJleHAiOjIzODg4MzY2ODl9.BpOG4zJCdA_NIUzf2IoJglVbt1-LPu6ugiC8_4euMbE",
+                desc: "A lawless land ruled by crime families where power, politics and revenge intersect in the most brutal ways."
+              },
+              {
+                title: "The Family Man",
+                genre: "Thriller",
+                year: 2019,
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/web-series/the%20family%20man.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL3dlYi1zZXJpZXMvdGhlIGZhbWlseSBtYW4uanBnIiwiaWF0IjoxNzU4MTE2NzIzLCJleHAiOjIzODg4MzY3MjN9.5Oukmu2BMOffBrqjTXrB97WIhSxe-FIlUFw5vrxqgkU",
+                desc: "A middle-class man who works for a special cell of the National Investigation Agency while trying to protect his family."
+              }
+            ].map((series, idx) => (
               <div key={idx} className="relative min-w-[200px] h-[320px] bg-white/10 rounded-xl shadow-lg flex flex-col items-center justify-center border border-white/20 group">
-                <img src={movie.img} alt={movie.title} className="w-32 h-40 object-cover rounded-lg mb-4" />
-                <span className="text-lg font-semibold text-white">{movie.title}</span>
-                <span className="text-sm text-gray-300">{movie.genre} • {movie.year}</span>
+                <img
+                  src={series.img}
+                  alt={series.title}
+                  className="rounded-lg mb-4 object-cover w-40 h-56"
+                />
+                <span className="text-lg font-semibold text-white">{series.title}</span>
+                <span className="text-sm text-gray-300">{series.genre} • {series.year}</span>
                 {/* Details on hover */}
                 <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
-                  <span className="text-lg font-bold mb-2">{movie.title}</span>
-                  <span className="text-sm mb-2">{movie.genre} • {movie.year}</span>
-                  <span className="text-xs text-center">{movie.desc}</span>
+                  <span className="text-lg font-bold mb-2">{series.title}</span>
+                  <span className="text-sm mb-2">{series.genre} • {series.year}</span>
+                  <span className="text-xs text-center">{series.desc}</span>
                 </div>
               </div>
             ))}
