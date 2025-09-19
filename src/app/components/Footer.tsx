@@ -51,7 +51,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <span className="text-gray-400 text-xs">@uzicodes</span>
+            <span className="text-orange-400 text-xs">Utsho Heaven Chowdhury</span>
           </div>
         </div>
       )}
