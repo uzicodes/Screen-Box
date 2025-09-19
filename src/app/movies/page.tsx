@@ -41,13 +41,13 @@ export default function Movies() {
           <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition font-semibold">Search</button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
-          {[1,2,3,4,5,6].map(i => (
+          {[...Array(26)].map((_, i) => (
             <div key={i} className="bg-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:bg-white/20 hover:shadow-2xl cursor-pointer">
               <img src={`/c1.jpg`} alt={`Movie ${i}`} className="w-40 h-56 object-cover rounded-lg mb-4" />
-              <h2 className="text-2xl font-bold text-yellow-200 mb-2">Movie Title {i}</h2>
+              <h2 className="text-2xl font-bold text-yellow-200 mb-2">Movie Title {i+1}</h2>
               <p className="text-lg text-white mb-2">Genre: Action</p>
               <p className="text-md text-gray-300 mb-2">2022</p>
-             <p className="text-md text-black font-normal mb-4 text-center">A short description of Movie {i}. This is just a dummy movie card for layout preview.</p>
+              <p className="text-md text-black font-normal mb-4 text-center">A short description of Movie {i+1}. This is just a dummy movie card for layout preview.</p>
               <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Watch Now</button>
             </div>
           ))}
