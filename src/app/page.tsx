@@ -125,7 +125,7 @@ export default function Home() {
                 title: "Interstellar",
                 genre: "Adventure",
                 year: 2014,
-                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/interstellar.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9pbnRlcnN0ZWxsYXIuanBnIiwiaWF0IjoxNzU4MDExMTk2LCJleHAiOjIzODg3MzExOTZ9.0oEFa64GbIIMcKB3ZdDAUsILEpyMq7K4hJv61X1oHcE",
+                img: "https://socazxtaswqtseqkcofl.supabase.co/storage/v1/object/sign/Posters/movies/interstellar.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82MTljMGYyNS00ZmYzLTQ2YjMtYmRhNi05Zjg3MTU5MTI0OWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3N0ZXJzL21vdmllcy9pbnRlcnN0ZWxsYXIuanBnIiwiaWF0IjoxNzU4Mjc4NzY5LCJleHAiOjIzODg5OTg3Njl9.aYy12DP2IKrmX1C-fgSe70_c3WMGd4cWtaQDgRtPfXU",
                 desc: "A team travels through a wormhole in space in an attempt to ensure humanity's survival."
               },
               {
